@@ -6,13 +6,13 @@ if (-not (Test-Path ".git")) {
     exit 1 
 }
 
-Write-Output "Staging all changes..."
+Write-Host "Staging all changes..."
 git add -A
 
-Write-Output "Committing..."
+Write-Host "Committing..."
 git commit -m "Autocommit"
 
-Write-Output "Pushing to gh-pages..."
+Write-Host "Pushing to gh-pages..."
 git push origin master:gh-pages --force
 
-Write-Output "Done! Now run: .\deploy.ps1" -ForegroundColor Green
+Write-Host "Done! Now run: .\deploy.ps1" -ForegroundColor Green
